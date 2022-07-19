@@ -44,13 +44,17 @@ void DisplayFactors(int n)
 
     for (int i = n; i <= n; i--)
     {
-        if (i > 0)
+        if (i > 0 && n % i == 0)
         {
-            if (n % i == 0)
+            if (i == 1)
+            {
+                cout << "and " << i;
+            }
+            else
             {
                 cout << i << ", ";
             }
-        }
+        }       
     }
 }
 
