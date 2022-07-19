@@ -16,7 +16,7 @@ int GetCurrentYear()
     time_t now = time(0);
     localtime_s(&newtime, &now);
 
-    return 1900 + newtime.tm_year;;
+    return 1900 + newtime.tm_year;
 }
 
 bool IsLeapYear(int year)
