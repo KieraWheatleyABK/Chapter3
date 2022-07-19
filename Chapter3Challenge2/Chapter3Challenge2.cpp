@@ -5,25 +5,32 @@
 
 using namespace std;
 
-int num;
-
 void GetUserInput();
 void DisplayErrorMessage();
-void DisplayFactors();
+void DisplayFactors(int n);
 
 void GetUserInput()
 {
+    int num = 0;
+    const char newLine = '\n';
+
     do
     {
         cout << "Enter a positive number (greater than 0): " << endl;
         cin >> num;
 
-        if (cin.fail())
+        if (!cin || num <= 0)
         {
+            cin.clear();
+            cin.ignore(INT_MAX, newLine);
             DisplayErrorMessage();
         }
-    } while (!cin.fail());
-    
+        else
+        {
+            DisplayFactors(num);
+        }
+
+    } while (num <= 0);
 }
 
 void DisplayErrorMessage()
@@ -31,9 +38,20 @@ void DisplayErrorMessage()
     cout << "Invalid input, please enter a positive number." << endl;
 }
 
-void DisplayFactors()
+void DisplayFactors(int n)
 {
+    cout << "Factors of " << n << " are: ";
 
+    for (int i = n; i <= n; i--)
+    {
+        if (i > 0)
+        {
+            if (n % i == 0)
+            {
+                cout << i << ", ";
+            }
+        }
+    }
 }
 
 int main()
