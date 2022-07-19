@@ -42,9 +42,9 @@ void DisplayFactors(int n)
 {
     cout << "Factors of " << n << " are: ";
 
-    for (int i = n; i <= n; i--)
+    for (int i = n; i > 0 && i <= n; i--)
     {
-        if (i > 0 && n % i == 0)
+        if (n % i == 0)
         {
             if (i == 1)
             {
