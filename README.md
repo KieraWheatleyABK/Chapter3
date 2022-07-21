@@ -1,4 +1,4 @@
-# Chapter3
+# Chapter 3
 
 CGS Chapter 3 Challenges
  
